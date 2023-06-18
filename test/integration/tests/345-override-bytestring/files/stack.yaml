@@ -1,4 +1,4 @@
-resolver: lts-20.23
+resolver: nightly-2023-06-18
 extra-deps:
 - bytestring-0.11.3.1
 - binary-0.8.9.0
