@@ -24,8 +24,7 @@ drop-packages:
 
 docker:
   enable: false
-  # Needs to be replaced by the equivalent for GHC 9.4.5, when available
-  repo: fpco/alpine-haskell-stack:8.10.4
+  repo: ghcr.io/fpco/alpine-haskell-stack:9.4.5
 
 nix:
   # --nix on the command-line to enable.
