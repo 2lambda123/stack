@@ -126,6 +126,15 @@ jobs:
             rm -Rf $(stack path --stack-root)/hooks
         fi
 
+        # Temporary attempt to understand better the build environment. Hopes
+        # that `stack exec` is one of the subcommands that automatically
+        # launches in a Docker container.
+        if [[ "${{ matrix.release-args }}" == "--alpine" ]]
+        then
+            stack --docker exec -- cat /etc/os-release
+            stack --docker exec -- apk list -I
+        fi
+
         # Do this in the same step as installing deps to get relevant env var modifications
         stack etc/scripts/release.hs check ${{ matrix.release-args }}
 
