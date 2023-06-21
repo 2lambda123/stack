@@ -8,7 +8,7 @@ import Data.List (stripPrefix)
 
 main :: IO ()
 main = do
-  for_ ["lts-20.25", "nightly-2023-06-18"] $ \snapshot -> do
+  for_ ["lts-20.25", "lts-21.0"] $ \snapshot -> do
     stack ["init", "--force", "--resolver", snapshot]
     str <- readFile "stack.yaml"
     case mapMaybe (stripPrefix "resolver: ") $ lines str of

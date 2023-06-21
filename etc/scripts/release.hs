@@ -1,5 +1,5 @@
 {- stack script
-   --resolver nightly-2023-06-18
+   --resolver lts-21.0
    --ghc-options -Wall
 -}
 
